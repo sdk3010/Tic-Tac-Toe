@@ -6,13 +6,11 @@ Tic-Tac-Toe Game
 📷 Output:
 
 
-      ![image](https://github.com/user-attachments/assets/e240fb1a-93e6-48fb-b8bb-cb42b910d16d)
-      
-      ![image](https://github.com/user-attachments/assets/2533a957-8783-460e-b0cf-951e08e48874)
-      
-      
-      ![image](https://github.com/user-attachments/assets/639a848a-f29e-453b-b33c-a8ef2b00126b)
-      
+![Screenshot 2025-06-14 064656](https://github.com/user-attachments/assets/7aea7230-d663-420a-b077-58189e72a224)
+![Screenshot 2025-06-14 064725](https://github.com/user-attachments/assets/038ef9b8-a12f-4873-9caf-47c5f25e8a2b)
+![Screenshot 2025-06-14 064748](https://github.com/user-attachments/assets/7f25b9aa-8b80-4712-9b30-5bdfaa0acdd8)
+
+
       
 
 
