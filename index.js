@@ -1,21 +1,18 @@
-// Select all elements
 let boxes = document.querySelectorAll(".box");
 let resetBtn = document.querySelector("#reset-btn");
 let newGameBtn = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
 
-let turnO = true; // true: O's turn, false: X's turn
-let count = 0;    // Track moves for draw
+let turnO = true; 
+let count = 0;    
 
-// All possible winning patterns
 let winPatterns = [
   [0, 1, 2], [0, 3, 6], [0, 4, 8],
   [1, 4, 7], [2, 5, 8], [2, 4, 6],
   [3, 4, 5], [6, 7, 8]
 ];
 
-// Reset game state
 let resetGame = () => {
   turnO = true;
   count = 0;
@@ -23,19 +20,17 @@ let resetGame = () => {
   msgContainer.classList.add("hide");
 };
 
-// Handle box clicks
-
 boxes.forEach((box) => {
   box.addEventListener("click", () => {
     if (turnO) {
       //playerO
       box.innerText = "O";
-      box.style.color = "blue"; // Set color for O
+      box.style.color = "blue"; 
       turnO = false;
     } else {
-      //playerX
+      
       box.innerText = "X";
-      box.style.color = "red"; // Set color for X
+      box.style.color = "red"; 
       turnO = true;
     }
     box.disabled = true;
@@ -50,19 +45,16 @@ boxes.forEach((box) => {
 });
 
 
-// Draw message
 let gameDraw = () => {
   msg.innerText = "Game was a Draw.";
   msgContainer.classList.remove("hide");
   disableBoxes();
 };
 
-// Disable all boxes
 let disableBoxes = () => {
   boxes.forEach(box => box.disabled = true);
 };
 
-// Enable and clear all boxes
 let enableBoxes = () => {
   boxes.forEach(box => {
     box.disabled = false;
@@ -70,14 +62,12 @@ let enableBoxes = () => {
   });
 };
 
-// Show winner message
 let showWinner = (winner) => {
   msg.innerText = `Congratulations, Winner is ${winner}`;
   msgContainer.classList.remove("hide");
   disableBoxes();
 };
 
-// Check for winner
 let checkWinner = () => {
   for (let pattern of winPatterns) {
     let [a, b, c] = pattern;
@@ -93,6 +83,5 @@ let checkWinner = () => {
   return false;
 };
 
-// Add event listeners for buttons
 newGameBtn.addEventListener("click", resetGame);
 resetBtn.addEventListener("click", resetGame);
